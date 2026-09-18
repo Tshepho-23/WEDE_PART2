@@ -1,0 +1,832 @@
+/* =========================================================
+   KASI KICKS - PART 2 CSS
+   Responsive website styling
+   ========================================================= */
+
+
+/* =========================================================
+   1. CSS RESET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5f5f5;
+    color: #222;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   2. BASE STYLES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+/* =========================================================
+   3. CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(92%, 1200px);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   4. HEADER
+   ========================================================= */
+
+.site-header {
+    background-color: #111;
+    color: #fff;
+    border-bottom: 3px solid #f5c400;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.site-header .container {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    max-height: 65px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+   5. NAVIGATION
+   ========================================================= */
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.4rem;
+}
+
+.main-nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 0.9rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: #f5c400;
+    color: #111;
+    transform: translateY(-2px);
+}
+
+.main-nav a:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   6. HERO SECTION
+   ========================================================= */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.75)
+        );
+    background-color: #222;
+    color: #fff;
+    padding: clamp(4rem, 10vw, 8rem) 0;
+    text-align: center;
+}
+
+.hero .container {
+    max-width: 900px;
+}
+
+.hero h1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    margin: 1rem 0;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    max-width: 750px;
+    margin: 0 auto 1.5rem;
+}
+
+
+/* =========================================================
+   7. TAGS
+   ========================================================= */
+
+.tag {
+    display: inline-block;
+    background-color: #111;
+    color: #fff;
+    padding: 0.35rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tag--signal {
+    background-color: #f5c400;
+    color: #111;
+}
+
+
+/* =========================================================
+   8. BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+    background-color: #f5c400;
+    color: #111;
+    text-decoration: none;
+    border: 2px solid #f5c400;
+    padding: 0.8rem 1.4rem;
+    border-radius: 6px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.3rem;
+}
+
+.btn:hover {
+    background-color: #111;
+    color: #fff;
+    border-color: #111;
+    transform: translateY(-2px);
+}
+
+.btn:focus {
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+.btn--ghost {
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+}
+
+.btn--ghost:hover {
+    background-color: #fff;
+    color: #111;
+}
+
+
+/* =========================================================
+   9. PAGE SECTIONS
+   ========================================================= */
+
+.page-section > section:not(.hero) {
+    padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.page-section > section:nth-child(even) {
+    background-color: #fff;
+}
+
+
+/* =========================================================
+   10. SECTION HEADINGS
+   ========================================================= */
+
+.section-head {
+    margin-bottom: 2rem;
+}
+
+.section-head h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    margin-top: 0.6rem;
+    color: #111;
+}
+
+section h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    margin-bottom: 1rem;
+}
+
+section h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.6rem;
+    color: #111;
+}
+
+
+/* =========================================================
+   11. GRID LAYOUTS
+   ========================================================= */
+
+/* Two-column layout */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: center;
+}
+
+/* Three-column layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.2rem, 3vw, 2rem);
+}
+
+
+/* =========================================================
+   12. CARDS
+   ========================================================= */
+
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: clamp(1.2rem, 3vw, 2rem);
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   13. ABOUT PAGE
+   ========================================================= */
+
+#page-about .grid-2 img {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+#page-about .grid-2 p {
+    max-width: 700px;
+}
+
+#page-about .card {
+    min-height: 180px;
+}
+
+
+/* =========================================================
+   14. PRODUCT PAGE
+   ========================================================= */
+
+.product-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card .tag {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    background-color: #eee;
+}
+
+.product-card h3 {
+    margin-top: 0.5rem;
+}
+
+.product-card .price {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #111;
+    margin-top: auto;
+    margin-bottom: 0.8rem;
+}
+
+.product-card a:not(.btn) {
+    display: inline-block;
+    color: #111;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+.product-card a:not(.btn):hover {
+    color: #d29f00;
+}
+
+
+/* =========================================================
+   15. FORM STYLING
+   ========================================================= */
+
+form {
+    width: min(100%, 800px);
+    margin: 0 auto;
+    background-color: #fff;
+    padding: clamp(1.5rem, 5vw, 3rem);
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.field {
+    margin-bottom: 1.3rem;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: #111;
+}
+
+.required::after {
+    content: " *";
+    color: #d00000;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 0.85rem 1rem;
+    background-color: #fff;
+    color: #222;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #f5c400;
+    box-shadow: 0 0 0 3px rgba(245, 196, 0, 0.2);
+}
+
+textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #777;
+}
+
+.form-note {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.form-status {
+    margin-top: 1rem;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   16. HOME PAGE
+   ========================================================= */
+
+.why {
+    background-color: #fff;
+}
+
+#page-index .hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+}
+
+#page-index .why .card {
+    height: 100%;
+}
+
+
+/* =========================================================
+   17. SPACING BETWEEN PRODUCT CATEGORIES
+   ========================================================= */
+
+#sneakers,
+#apparel,
+#accessories {
+    scroll-margin-top: 90px;
+}
+
+#apparel,
+#accessories {
+    border-top: 1px solid #e1e1e1;
+}
+
+
+/* =========================================================
+   18. ACCESSIBILITY
+   ========================================================= */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #f5c400;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   19. TABLET BREAKPOINT
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header .container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.8rem;
+        padding: 1rem 0;
+    }
+
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-nav a {
+        padding: 0.55rem 0.7rem;
+        font-size: 0.9rem;
+    }
+
+    .grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+        gap: 2rem;
+    }
+
+    .product-card img {
+        height: 240px;
+    }
+}
+
+
+/* =========================================================
+   20. MOBILE BREAKPOINT
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+    }
+
+    .site-header {
+        position: relative;
+    }
+
+    .site-header .container {
+        min-height: auto;
+        padding: 1rem 0;
+    }
+
+    .logo img {
+        width: 150px;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .main-nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.3rem;
+        width: 100%;
+    }
+
+    .main-nav li {
+        width: 100%;
+    }
+
+    .main-nav a {
+        text-align: center;
+        padding: 0.65rem 0.4rem;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        padding: 4rem 0;
+    }
+
+    #page-index .hero {
+        min-height: 450px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2rem, 11vw, 3rem);
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .grid-2,
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+        gap: 2rem;
+    }
+
+    .card {
+        padding: 1.3rem;
+    }
+
+    #page-about .grid-2 img {
+        height: 240px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .product-card img {
+        height: 280px;
+    }
+
+    form {
+        padding: 1.3rem;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 0.3rem 0;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   21. SMALL MOBILE DEVICES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .main-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .logo img {
+        width: 135px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+}
+
+
+/* =========================================================
+   22. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+    background-color: #111;
+    color: #fff;
+    margin-top: 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.footer-brand img {
+    width: 170px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.footer-brand p {
+    color: #ccc;
+}
+
+.site-footer h3 {
+    color: #f5c400;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #f5c400;
+}
+
+.footer-contact p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    border-top: 1px solid #444;
+    text-align: center;
+    padding: 1rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: #aaa;
+    font-size: 0.85rem;
+}
+
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-brand img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* =========================================================
+   LOCATION / MAP
+   ========================================================= */
+
+.location {
+    background-color: #fff;
+    padding: clamp(3rem, 7vw, 5rem) 0;
+}
+
+.map-container {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #ddd;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    margin-top: 2rem;
+}
+
+.map-container iframe {
+    display: block;
+    width: 100%;
+    min-height: 450px;
+}
+
+.location-info {
+    margin-top: 2rem;
+}
+
+.location-info .card {
+    max-width: 600px;
+}
+
+.location-info .btn {
+    margin-left: 0;
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .map-container iframe {
+        min-height: 350px;
+    }
+
+    .location-info .card {
+        width: 100%;
+    }
+}
